@@ -24,3 +24,6 @@ Host someinternalhost
 и одно командой
  -> ssh someinternalhost
 попадаем на someinternalhost
+
+testapp_IP = 62.84.116.217
+testapp_port = 9292
