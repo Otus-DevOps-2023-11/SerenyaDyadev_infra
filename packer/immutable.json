@@ -1,0 +1,35 @@
+{
+    "builders": [
+        {
+	    "type": "yandex",
+  	    "service_account_key_file": "{{ user `service_account_key_file` }}",
+            "folder_id": "{{ user `folder_id` }}",
+            "source_image_family": "{{ user `source_image_family` }}",
+            "image_name": "reddit-base-{{timestamp}}",
+            "image_family": "reddit-full",
+            "ssh_username": "ubuntu",
+            "platform_id": "{{ user `platform_idy` }}",
+	    "use_ipv4_nat": true
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "files/deploy.sh",
+            "execute_command": "sudo {{.Path}}"
+        },
+        {
+           "type": "file",
+           "source": "files/reddit.service",
+           "destination": "/tmp/reddit.service"
+        },
+	{
+  	   "type": "shell",
+           "inline": [
+			"cp /tmp/reddit.service /etc/systemd/system/reddit.service",
+		     	"systemctl enable reddit"
+		     ],
+	   "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'"
+	}
+    ]
+}
