@@ -1,0 +1,21 @@
+[Unit]
+Description=Reddit start
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/reddit/
+PIDFile=/tmp/puma.pid
+
+User=root
+Group=root
+
+
+ExecStart=/usr/local/bin/puma -d
+
+TimeoutSec=300
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
