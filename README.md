@@ -1,29 +1,19 @@
 # SerenyaDyadev_infra
 SerenyaDyadev Infra repository
 
-bastion_IP = 51.250.4.93
-someinternalhost_IP = 10.128.0.19
+в папке packer добавлены файлы согласно ДЗ
 
-## ssh jump
-ssh -i ~/.ssh/appuser -A -J appuser@51.250.4.93 appuser@10.128.0.19
+Запуск виладиции 
+packer validate -var-file=./variables.json ubuntu16.json
 
-## прописываем в ~/.ssh/config
-Host bastion
-  HostName 51.250.4.93
-  User appuser
-  IdentityFile ~/.ssh/appuser
-  IdentitiesOnly yes
+Запуск сборки образа
+packer build -var-file=./variables.json ubuntu16.json
 
-Host someinternalhost
-  HostName 10.128.0.19
-  ProxyJump bastion
-  User appuser
-  IdentityFile ~/.ssh/appuser
-  IdentitiesOnly yes
 
-и одно командой
- -> ssh someinternalhost
-попадаем на someinternalhost
+Доп дз 10 пункт
+packer build -var-file=./variables.json immutable.json
+Собирается образ с автозапуском reddit
 
-testapp_IP = 62.84.116.217
-testapp_port = 9292
+create-reddit-vm.sh
+запуск скрипта создает ВМ из образа созданного выше
+
