@@ -1,19 +1,13 @@
 # SerenyaDyadev_infra
 SerenyaDyadev Infra repository
 
-в папке packer добавлены файлы согласно ДЗ
+ - в папке terraform добавлены файлы согласно ДЗ
+ - Определена input переменная для приватного ключа - private_key_file
+ - В файле variables.tf есть input переменнfz zona в которой есть default знаение, в файле terraform.tfvars она закомментирована, что бы при сборке использовалось default значение
+ - все кофнигурационные файл отформатированы командой terraform fmt
+ - terraform.tfvars.example создан lдля ubuntu
+ - создается ВМ с приложением
 
-Запуск виладиции 
-packer validate -var-file=./variables.json ubuntu16.json
-
-Запуск сборки образа
-packer build -var-file=./variables.json ubuntu16.json
-
-
-Доп дз 10 пункт
-packer build -var-file=./variables.json immutable.json
-Собирается образ с автозапуском reddit
-
-create-reddit-vm.sh
-запуск скрипта создает ВМ из образа созданного выше
+ c*
+создаются 2 приложения с балансировщиком и выводится в конце их ИП
 
