@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-}
-
 variable "cloud_id" {
   description = "Cloud"
 }
