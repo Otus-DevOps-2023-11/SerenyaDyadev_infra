@@ -1,0 +1,9 @@
+cloud_id  = "b1gn73tbe2qk15670npt"
+folder_id = "b1gcdiortk5emo3rpmrj"
+# zone      = "ru-central1-a" // для использования дефолтного значения
+image_id                 = "fd82n0voubrvbt1mqlhb"
+public_key_path          = "~/.ssh/appuser.pub"
+subnet_id                = "e9bsme7dofhmmcd6t5ev"
+service_account_key_file = "../../key.json"
+private_key_file         = "~/.ssh/appuser"
+network_id               = "enpmovl2t2gjl8bbab3v"
