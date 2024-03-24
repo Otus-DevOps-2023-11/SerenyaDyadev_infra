@@ -1,9 +1,8 @@
-cloud_id  = "b1gn73tbe2qk15670npt"
-folder_id = "b1gcdiortk5emo3rpmrj"
-zone      = "ru-central1-a" // для использования дефолтного значения
-image_id                 = "fd82n0voubrvbt1mqlhb"
-public_key_path          = "~/.ssh/ubuntu.pub"
-subnet_id                = "e9bsme7dofhmmcd6t5ev"
-service_account_key_file = "files/example.json"
-private_key_file         = "~/.ssh/ubuntu"
-network_id               = "enpmovl2t2gjl8bbab3v"
+image_id                 = "image_id"
+cloud_id                 = "cloud_id"
+folder_id                = "folder_id"
+zone                     = "zone"
+public_key_path          = "public_key_path"
+subnet_id                = "subnet_id"
+service_account_key_file = "service_account_key_file"
+
