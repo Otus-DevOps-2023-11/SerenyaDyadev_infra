@@ -1,29 +1,13 @@
 # SerenyaDyadev_infra
 SerenyaDyadev Infra repository
 
-bastion_IP = 51.250.4.93
-someinternalhost_IP = 10.128.0.19
+ - в папке terraform добавлены файлы согласно ДЗ
+ - Определена input переменная для приватного ключа - private_key_file
+ - В файле variables.tf есть input переменнfz zona в которой есть default знаение, в файле terraform.tfvars она закомментирована, что бы при сборке использовалось default значение
+ - все кофнигурационные файл отформатированы командой terraform fmt
+ - terraform.tfvars.example создан lдля ubuntu
+ - создается ВМ с приложением
 
-## ssh jump
-ssh -i ~/.ssh/appuser -A -J appuser@51.250.4.93 appuser@10.128.0.19
+ c*
+создаются 2 приложения с балансировщиком и выводится в конце их ИП
 
-## прописываем в ~/.ssh/config
-Host bastion
-  HostName 51.250.4.93
-  User appuser
-  IdentityFile ~/.ssh/appuser
-  IdentitiesOnly yes
-
-Host someinternalhost
-  HostName 10.128.0.19
-  ProxyJump bastion
-  User appuser
-  IdentityFile ~/.ssh/appuser
-  IdentitiesOnly yes
-
-и одно командой
- -> ssh someinternalhost
-попадаем на someinternalhost
-
-testapp_IP = 62.84.116.217
-testapp_port = 9292
