@@ -1,18 +1,18 @@
 terraform {
   backend "s3" {
     endpoints = {
-      s3 = "https://storage.yandexcloud.net"
+      s3 = "http://storage.yandexcloud.net"
     }
-    bucket = "centhis-terraform-states"
+    bucket = "bucket"
     region = "ru-central1"
-    key    = "stage.tfstate"
+    key    = "terraform.tfstate"
+
+    access_key = "access_key"
+    secret_key = "secret_key"
 
     skip_region_validation      = true
     skip_credentials_validation = true
     skip_requesting_account_id  = true
     skip_s3_checksum            = true
-
-    dynamodb_endpoint = "https://docapi.serverless.yandexcloud.net/ru-central1"
-    dynamodb_table    = "table980"
   }
 }
