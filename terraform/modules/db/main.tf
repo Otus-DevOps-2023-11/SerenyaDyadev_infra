@@ -29,6 +29,6 @@ resource "yandex_compute_instance" "db" {
   }
 
   metadata = {
-  ssh-keys = "ubuntu:${file(var.public_key_path)}"
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 }
