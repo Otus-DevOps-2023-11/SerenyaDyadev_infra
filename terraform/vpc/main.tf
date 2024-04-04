@@ -1,6 +1,3 @@
-terraform {
-}
-
 resource "yandex_vpc_network" "app-network" {
   name = "app-network"
 }
