@@ -1,3 +1,8 @@
+cloud_id                 = "your_cloud_id"
+folder_id                = "your_folder_id"
+zone                     = "ru-central1-a"
+service_account_key_file = "files/example.json"
+image_id                 = "your_image_id"
 subnet_id                = "your_subnet_id"
 network_id               = "your_network_id"
 app_disk_image           = "reddit-app-base"
