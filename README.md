@@ -1,11 +1,7 @@
 # SerenyaDyadev_infra
 SerenyaDyadev Infra repository
-
-- перенос файла lb в terraform/files
-- Зададим IP для инстанса с приложением
-- Создание образова VM
-- main.tf разбиваем на модули
-- создание папок с модулями
-- рзделение на prod и stage
-- запускается  для обоих сборок
-
+anasible
+устанвока ansible
+запуск VPS и применений их IP файлах inventory
+запуск разных задач на vps asibl'ом
+ansible app -m command -a 'rm -rf ~/reddit' -> удаление слонированного в прошлых командах reddit
